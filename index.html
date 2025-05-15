@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>انتخابات مجلس الشعب</title>
+    <link rel="stylesheet" href="a.css" />
+    <!-- <link rel="stylesheet" href="b.js" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">انتخبني</h1>
+      </header>
+      <main>
+        <p id="description">انتخابات مجلس الشعب مركز الواسطي</p>
+        <form
+          id="survey-form"
+          method="post"
+          action="https://poll-in.herokuapp.com/survey"
+          -->
+          <!--  onsubmit="return surveyed(event)"> -->
+          <fieldset>
+            <legend>معلومات شخصيه</legend>
+            <div>
+              <label for="name" id="name-label">* الاسم: </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="ادخل الاسم "
+                required />
+            </div>
+            <div>
+              <label for="id" id="id-label">* الرقم القومي: </label>
+              <input
+                type="id"
+                id="id"
+                name="id"
+                placeholder="ادخل الرقم القومي"
+                required /><br />
+            </div>
+            <div>
+              <label for="number" id="number-label">* العمر: </label>
+              <input
+                type="number"
+                id="number"
+                name="age"
+                placeholder="ادخل العمر"
+                min="18"
+                max="150"
+                required />
+              <br />** فقط من فوق سن الثامن عشر مسموح له الانتخاب
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>معلومات المرشحين</legend>
+            <div class="question">
+              <div>
+                <label for="dropdown">اسم القريه </label>
+              </div>
+              <select id="dropdown" name="source">
+                <option value="social-media" selected>قمن</option>
+                <option value="friend" name="source">ونا</option>
+                <option value="abuat" name="source">ابويط</option>
+                <option value="elmasara" name="source">
+                  معصره ابوصير الملق
+                </option>
+                <option value="aboser" name="source">ابوصير الملق</option>
+                <option value="alnyames" name="source">النواميس</option>
+                <option value="elmnashy" name="source">مناشي ابوصير</option>
+              </select>
+            </div>
+            <div class="question" id="recommendation-label">
+              <div>مرشح مستقل</div>
+              <div
+                class="radios"
+                role="group"
+                aria-labelledby="recommendation-label">
+                <label for="definitely"
+                  ><input
+                    type="checkbox"
+                    name="recommend"
+                    id="definitely"
+                    value="Definitely"
+                    checked />عماد اليماني</label
+                >
+                <label for="maybe"
+                  ><input
+                    type="checkbox"
+                    name="recommend"
+                    id="maybe"
+                    value="Maybe" />عصام خلاف</label
+                >
+                <label for="notsure"
+                  ><input
+                    type="checkbox"
+                    name="recommend"
+                    id="notsure"
+                    value="Not Sure" />محمد رشاد</label
+                >
+                <label for="notsure"
+                  ><input
+                    type="checkbox"
+                    name="recommend"
+                    id="notsure"
+                    value="Not Sure" />ابراهيم نصار</label
+                >
+              </div>
+            </div>
+            <div class="question">
+              <div id="features-label">مرشح قوايم</div>
+              <div class="radios" role="group" aria-labelledby="features-label">
+                <label for="result-imp"
+                  ><input
+                    type="radio"
+                    name="improvement"
+                    id="result-imp"
+                    value="Result Display" />حزب مستقبل وطن</label
+                >
+                <label for="post-imp"
+                  ><input
+                    type="radio"
+                    name="improvement"
+                    id="post-imp"
+                    value="Posting Polls" />
+                  حزب النور
+                </label>
+                <label for="comment-add"
+                  ><input
+                    type="radio"
+                    name="improvement"
+                    id="comment-add"
+                    value="Add Comments" />حزب تحيا مصر</label
+                >
+                <label for="follow-add"
+                  ><input
+                    type="radio"
+                    name="improvement"
+                    id="follow-add"
+                    value="Following users" />حزب مصر</label
+                >
+                <label for="votedBy-add"
+                  ><input
+                    type="radio"
+                    name="improvement"
+                    id="votedBy-add"
+                    value="Voted By" />حزب الوطن</label
+                >
+              </div>
+            </div>
+            <div class="question">
+              <div>
+                <label for="suggestions"
+                  >Any Comments, Suggestions or General Feedback?</label
+                >
+              </div>
+              <textarea
+                name="suggestions"
+                id="suggestions"
+                cols="30"
+                rows="5"
+                placeholder="Enter Your Feedback.."
+                style="width: 60%"></textarea>
+            </div>
+          </fieldset>
+          <center>
+            <button type="submit" class="btn btn-big-green" id="submit">
+              انتخب
+            </button>
+          </center>
+        </form>
+      </main>
+      <footer>
+        &copy; 2023
+        <a href="https://poll-in.herokuapp.com" target="_blank">Poll-in</a>
+      </footer>
+    </div>
+  </body>
+</html>
